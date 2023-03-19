@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup with 3 options</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f7f7f7;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .popup button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showPopup()">Donate</button>
+    <div class="popup" id="myPopup">
+        <h2>Select a mode of donation</h2>
+        <button onclick="location.href='form.html'">Mint NFT from metadata</button>
+        <button onclick="location.href='form2.html'">Mint NFT from Image</button>
+        <button onclick="location.href='https://rzp.io/l/SHHSZZFj'">Funds</button>
+        <button class="popup-btn" onclick="hidePopup()">No</button>
+    </div>
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

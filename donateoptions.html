@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazing Buttons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+            padding: 20px 40px;
+            border-radius: 50px;
+            background-color: transparent;
+            border: 5px solid #fff;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .button span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .button:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.3;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover:before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .red {
+            background-color: #ff4136;
+            border-color: #ff4136;
+        }
+
+        .blue {
+            background-color: #0074d9;
+            border-color: #0074d9;
+        }
+
+        .green {
+            background-color: #2ecc40;
+            border-color: #2ecc40;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Select your Donation mode</h1>
+        <div class="buttons">
+            <button class="button red" onclick="location.href='https://rzp.io/l/SHHSZZFj'"><span>Funds</span></button><br>
+            <button class="button blue" onclick="location.href='form.html'"><span>Mint NFT from Image</span></button>
+            <button class="button green" onclick="location.href='form2.html'"><span>Mint NFT from Metadata</span></button>
+        </div>
+    </div>
+</body>
+
+</html>
